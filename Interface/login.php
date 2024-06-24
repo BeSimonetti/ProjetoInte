@@ -63,7 +63,7 @@
                 <h1>Login</h1>
             </div>
             <div class="inputBox">
-                <input type="text" placeholder="E-mail" name="nome" required>
+                <input type="text" placeholder="E-mail" name="email" required>
             </div>
             <div class="inputBox">
                 <input type="password" placeholder="Senha" name="senha" required>
