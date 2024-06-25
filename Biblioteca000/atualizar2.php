@@ -1,12 +1,12 @@
 <?php
 include "biblioteca.class.php";
 
-if(isset($_GET['id'])) {
+if(isset($_GET['ID_Livro'])) {
     $id_Livro = $_GET['id'];
 
     $b = new Biblioteca();
 
-    $livro = $b->getLivroById($id_Livro);
+    print_r($b);
 
 
     // Verifica se a pessoa existe
