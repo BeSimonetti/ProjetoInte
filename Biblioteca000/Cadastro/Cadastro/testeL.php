@@ -34,7 +34,7 @@
     {
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        header('Location: sistema.php');    //redirecionar para a biblioteca pagina inicial
+        header('Location: Biblioteca000/index.php');    //redirecionar para a biblioteca pagina inicial
         }
     }
     else

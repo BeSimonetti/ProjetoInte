@@ -7,7 +7,7 @@
     <title>SITE | GN</title>
 </head>
 <body>
-    <div class="box">
+    <div class="boxHome">
         <a href="login.php">Login</a>
         <a href="cadastro.php">Cadastre-se</a>
     </div>

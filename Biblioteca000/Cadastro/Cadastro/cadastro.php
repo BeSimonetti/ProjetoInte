@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
     <style>
     body{
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #480001;
+        background-color: white;
     }
     .telaCad{
         background-color: rgba(0, 0, 0, 0.95);

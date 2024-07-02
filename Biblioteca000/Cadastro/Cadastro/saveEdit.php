@@ -14,7 +14,7 @@
         if($result){
             header('Location: sistema.php');
         } else {
-            echo "Error updating record: " . $db->error;
+            echo "Erro ao editar usuario" . $db->error;
         }
     }
 ?>
