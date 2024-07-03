@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "../biblioteca.class.php";
 
 if(isset($_GET['ID_Livro'])) {

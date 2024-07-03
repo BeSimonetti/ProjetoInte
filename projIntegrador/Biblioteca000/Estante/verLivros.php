@@ -55,7 +55,7 @@
                     <?php
                         include "biblioteca.class.php";
                         $b = new Biblioteca();
-                        $livros = $b->listarLivros();
+                        $livros = $b->getLivrosByIddoUser($ID_User);
                         
                         foreach ($livros as $livro):
                     ?>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     if (!isset($_SESSION['ID_User'])) {
         header('Location: login.php');
         exit();
@@ -8,7 +8,7 @@
     
     $ID_User = $_SESSION['ID_User'];
 
-    var_dump($ID_User); //preciso que mostre o ID do usuario logado que nao sei se foi salvo ou nao
+    //var_dump($ID_User); 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

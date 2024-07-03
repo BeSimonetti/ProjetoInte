@@ -7,7 +7,6 @@
     }
     
     $ID_User = $_SESSION['ID_User'];
-    var_dump($ID_User);
     class Biblioteca {
         private $id_usuario;
         public $id_Livro, $id_Livro2, $tituloLivro, $autorLivro, $ISBN, $editora, $estado;
@@ -146,22 +145,7 @@
                 return $rs;
             }
         }
-        function listarUmLivro($id) {
-            $database = new Conexao();
-            $db = $database->getConnection();
-
-            $sql = "SELECT * FROM livro WHERE ID_Livro = :id";
-
-            try {
-                $stmt = $db->query($sql);                                                                                                                                                                                                                                                                                                           
-                $rs = $stmt->fetchAll(PDO::FETCH_ASSOC); //rs = result -> resultado  ::::: fetchAll == ecncapsula realizando o processo concatenativo em todos os itens/objetos presentes no ambiente
-                return $rs;                          
-            } catch(PDOException $e) {
-                echo 'Erro ao listar UM livro: ' . $e->getMessage();
-                $rs = [];
-                return $rs;
-            }
-        }
+     
 
         function updateLivros(){
             $database = new Conexao(); //nova instância da conexao
@@ -243,8 +227,23 @@
             }
         }
 
-        function getLivrosById(){
-
+        function getLivrosByIddoUser($ID_User) {
+            $database = new Conexao(); //nova instancia da conexao
+            $db = $database->getConnection(); //tenta conectar
+    
+            $sql = "SELECT * FROM livro WHERE ID_User = :ID_User";
+    
+            try {
+                $stmt = $db->prepare($sql);
+                $stmt->bindParam(':ID_User', $ID_User, PDO::PARAM_INT);
+                $stmt->execute();
+                $rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $rs;                          
+            } catch(PDOException $e) {
+                echo 'Erro ao listar livros: ' . $e->getMessage();
+                $rs = [];
+                return $rs;
+            }
         }
     }
 ?>

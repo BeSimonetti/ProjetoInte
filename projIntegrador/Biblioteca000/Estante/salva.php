@@ -1,10 +1,9 @@
 <?php
+
 include_once "../Cadastro/sessao.php";
-
-
 include "biblioteca.class.php";
 
-//criação de um objeto ( p )
+//criação de um objeto ( b )
 $b = new Biblioteca();
 
 $id = $_POST['id'];

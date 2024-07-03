@@ -1,5 +1,4 @@
         <?php 
-        session_start();
          if(isset($_GET['id'])) {
             $id_Livro = $_GET['id'];
          }
